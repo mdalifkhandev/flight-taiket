@@ -1,30 +1,39 @@
 import { Box, Button, ButtonGroup } from "@mui/material";
-import Test1 from "./test1";
-import Text2 from "./text2";
+import Fligth from "../fligrh/Fligth";
+import GroupFligth from "../groupFligth/GroupFligth";
 import { useState } from "react";
-
+import Tore from "../tore/Tore";
+import Visa from "../visa/Visa";
 
 
 const conponent=[
-  {
-    label:"Test1",
-    component:Test1
-  },
-  {
-    label:"Test2",
-    component:Text2
-  }
-]
+    {
+      label:"Fligrh",
+      component:Fligth
+    },
+    {
+      label:"Group Fligth",
+      component:GroupFligth
+    },
+    {
+      label:"Tore",
+      component:Tore
+    },
+    {
+        label:"Visa",
+        component:Visa
+    }
+  ]
 
-
-const test = () => {
+const HotDetails = () => {
 
 const [activeIndex, setActiveIndex] = useState(0);
   const ActiveCard = conponent[activeIndex].component;
 
 
-  return (
-    <Box display="flex" flexDirection="column" alignItems="flex-end">
+
+    return (
+        <Box display="flex" flexDirection="column" alignItems="flex-end">
       {/* MUI Button Group */}
       <ButtonGroup
         variant="outlined"
@@ -33,7 +42,7 @@ const [activeIndex, setActiveIndex] = useState(0);
           overflow: "hidden",
           marginBottom: 3,
           border: "1px solid #ccc",
-          backgroundColor: "#fff",
+          backgroundColor: "#00dd90",
           marginTop: 4,
         }}
       >
@@ -48,8 +57,8 @@ const [activeIndex, setActiveIndex] = useState(0);
               textTransform: "none",
               fontWeight: 500,
               borderRadius:0,
-              backgroundColor: activeIndex === index ? "#00dd90" : "#fff",
-              color: activeIndex === index ? "#fff" : "#444",
+              backgroundColor: activeIndex === index ? "#fff" : "#00dd90",
+              color: activeIndex === index ? "#000000" : "#000000",
               '&:hover': {
                 backgroundColor: activeIndex === index ? "#00dd90" : "#f0f0f0"
               },
@@ -64,7 +73,7 @@ const [activeIndex, setActiveIndex] = useState(0);
       {/* Dynamic Card */}
       <ActiveCard />
     </Box>
-  );
+    );
 };
 
-export default test;
+export default HotDetails;

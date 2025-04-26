@@ -1,0 +1,193 @@
+{
+    "airlines": [
+      { "id": "AL001", "name": "SkyHigh Airlines", "logo": "skyhigh.png" },
+      { "id": "AL002", "name": "FlyFast Airways", "logo": "flyfast.png" },
+      { "id": "AL003", "name": "BlueSkies", "logo": "blueskies.png" },
+      { "id": "AL004", "name": "AeroNova", "logo": "aeronova.png" },
+      { "id": "AL005", "name": "BanglaAir", "logo": "banglaair.png" },
+      { "id": "AL006", "name": "JetZoom", "logo": "jetzoom.png" }
+    ],
+    "airports": [
+      { "code": "JFK", "city": "New York", "country": "USA" },
+      { "code": "LHR", "city": "London", "country": "UK" },
+      { "code": "DAC", "city": "Dhaka", "country": "Bangladesh" },
+      { "code": "DEL", "city": "Delhi", "country": "India" },
+      { "code": "DXB", "city": "Dubai", "country": "UAE" },
+      { "code": "SIN", "city": "Singapore", "country": "Singapore" }
+    ],
+    "flights": [
+      {
+        "id": "FL001",
+        "airlineId": "AL001",
+        "from": "JFK",
+        "to": "LHR",
+        "departureTime": "2025-05-01T10:00:00Z",
+        "arrivalTime": "2025-05-01T20:00:00Z",
+        "price": 750,
+        "availableSeats": 120
+      },
+      {
+        "id": "FL001",
+        "airlineId": "AL001",
+        "to": "JFK",
+        "from": "LHR",
+        "departureTime": "2025-05-01T10:00:00Z",
+        "arrivalTime": "2025-05-01T20:00:00Z",
+        "price": 750,
+        "availableSeats": 120
+      },
+      {
+        "id": "FL002",
+        "airlineId": "AL002",
+        "from": "DAC",
+        "to": "JFK",
+        "departureTime": "2025-05-02T06:00:00Z",
+        "arrivalTime": "2025-05-02T16:30:00Z",
+        "price": 900,
+        "availableSeats": 80
+      },
+      {
+        "id": "FL003",
+        "airlineId": "AL003",
+        "from": "DEL",
+        "to": "DAC",
+        "departureTime": "2025-05-03T09:00:00Z",
+        "arrivalTime": "2025-05-03T11:30:00Z",
+        "price": 300,
+        "availableSeats": 100
+      },
+      {
+        "id": "FL004",
+        "airlineId": "AL004",
+        "from": "LHR",
+        "to": "DXB",
+        "departureTime": "2025-05-04T15:00:00Z",
+        "arrivalTime": "2025-05-04T23:00:00Z",
+        "price": 680,
+        "availableSeats": 95
+      },
+      {
+        "id": "FL005",
+        "airlineId": "AL005",
+        "from": "DAC",
+        "to": "SIN",
+        "departureTime": "2025-05-05T07:00:00Z",
+        "arrivalTime": "2025-05-05T13:30:00Z",
+        "price": 400,
+        "availableSeats": 90
+      },
+      {
+        "id": "FL006",
+        "airlineId": "AL006",
+        "from": "SIN",
+        "to": "DEL",
+        "departureTime": "2025-05-06T08:00:00Z",
+        "arrivalTime": "2025-05-06T12:00:00Z",
+        "price": 350,
+        "availableSeats": 105
+      },
+      {
+        "id": "FL007",
+        "airlineId": "AL001",
+        "from": "JFK",
+        "to": "DAC",
+        "departureTime": "2025-05-07T03:00:00Z",
+        "arrivalTime": "2025-05-07T15:00:00Z",
+        "price": 980,
+        "availableSeats": 70
+      },
+      {
+        "id": "FL008",
+        "airlineId": "AL003",
+        "from": "DXB",
+        "to": "SIN",
+        "departureTime": "2025-05-08T13:00:00Z",
+        "arrivalTime": "2025-05-08T20:00:00Z",
+        "price": 600,
+        "availableSeats": 88
+      },
+      {
+        "id": "FL009",
+        "airlineId": "AL002",
+        "from": "DEL",
+        "to": "LHR",
+        "departureTime": "2025-05-09T10:30:00Z",
+        "arrivalTime": "2025-05-09T18:00:00Z",
+        "price": 720,
+        "availableSeats": 100
+      },
+      {
+        "id": "FL010",
+        "airlineId": "AL005",
+        "from": "SIN",
+        "to": "JFK",
+        "departureTime": "2025-05-10T22:00:00Z",
+        "arrivalTime": "2025-05-11T14:00:00Z",
+        "price": 1050,
+        "availableSeats": 60
+      }
+    ],
+    "passengers": [
+      {
+        "id": "P001",
+        "name": "Jon Kabir",
+        "email": "jon@example.com",
+        "phone": "+8801234567890"
+      },
+      {
+        "id": "P002",
+        "name": "Asad Islam",
+        "email": "asad@example.com",
+        "phone": "+8801712345678"
+      },
+      {
+        "id": "P003",
+        "name": "Sadia Rahman",
+        "email": "sadia@example.com",
+        "phone": "+8801987654321"
+      }
+    ],
+    "bookings": [
+      {
+        "id": "B001",
+        "passengerId": "P001",
+        "flightId": "FL001",
+        "bookingDate": "2025-04-10T09:30:00Z",
+        "seatNumber": "21A",
+        "status": "confirmed"
+      },
+      {
+        "id": "B002",
+        "passengerId": "P002",
+        "flightId": "FL003",
+        "bookingDate": "2025-04-11T14:00:00Z",
+        "seatNumber": "12B",
+        "status": "confirmed"
+      },
+      {
+        "id": "B003",
+        "passengerId": "P003",
+        "flightId": "FL005",
+        "bookingDate": "2025-04-12T11:45:00Z",
+        "seatNumber": "9C",
+        "status": "pending"
+      },
+      {
+        "id": "B004",
+        "passengerId": "P001",
+        "flightId": "FL007",
+        "bookingDate": "2025-04-13T08:15:00Z",
+        "seatNumber": "18D",
+        "status": "confirmed"
+      },
+      {
+        "id": "B005",
+        "passengerId": "P002",
+        "flightId": "FL009",
+        "bookingDate": "2025-04-14T15:20:00Z",
+        "seatNumber": "22F",
+        "status": "cancelled"
+      }
+    ]
+  }
+  

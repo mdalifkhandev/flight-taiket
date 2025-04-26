@@ -6,7 +6,7 @@ const NavBar = () => {
     
 
     return (
-        <div className=" mx-64">
+        <div className=" px-64 bg-white">
             
             <AppBar position="static" className="bg-black shadow-none" sx={{backgroundColor:'#ffff',boxShadow:'none'}} >
                 <Toolbar className="flex justify-between items-center">
