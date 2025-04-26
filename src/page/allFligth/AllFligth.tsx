@@ -2,7 +2,7 @@
 const AllFligth = () => {
     return (
         <div>
-            
+            hello world
         </div>
     );
 };
