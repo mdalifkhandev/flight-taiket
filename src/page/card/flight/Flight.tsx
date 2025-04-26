@@ -7,6 +7,7 @@ import { useAppDispatch, useAppSelector } from "../../../redux/hooks";
 import { useGetFligthDataQuery } from "../../../redux/features/fligts/fligthApi";
 import { setFlights } from "../../../redux/features/fligts/fligthSlice";
 import { addTicket } from "../../../redux/features/fligts/flightMultipalSlice";
+import { useNavigate } from "react-router-dom";
 
 
 const flightCardComponents = [
@@ -28,6 +29,7 @@ const Flight = () => {
   const dispatch = useAppDispatch()
   const [flight, setFlight] = useState(0);
   const FlightComponent = flightCardComponents[flight].Component;
+  const naviget=useNavigate()
 
 
 
@@ -53,6 +55,8 @@ const Flight = () => {
       flightClass: sitClass
     }
     dispatch(setFlights(newFlightDetails))
+    naviget('/allfligth')
+
   }
 
   return (
