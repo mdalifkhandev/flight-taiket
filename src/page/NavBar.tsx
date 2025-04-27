@@ -11,7 +11,7 @@ const NavBar = () => {
             <AppBar position="static" className="bg-black shadow-none" sx={{backgroundColor:'#ffff',boxShadow:'none'}} >
                 <Toolbar className="flex justify-between items-center">
                     {/* Logo */}
-                    <div className=" font-bold text-[#31D099] text-2xl ">FL<span className="text-gray-600">Y</span>FAR </div>
+                    <div className=" font-bold text-[#31D099] text-2xl"><a href="/">FL<span className="text-gray-600">Y</span>FAR</a> </div>
 
                     {/* Login & Register Buttons */}
                     <div className="space-x-4">
