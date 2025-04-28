@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlane } from "@fortawesome/free-solid-svg-icons";
 import { Checkbox, FormControlLabel, Slider } from "@mui/material";
 import { useState } from "react";
+import FlightDetails from "./FlightDetails";
 const AllFligth = () => {
 
     const { data } = useGetFligthDataQuery()
@@ -200,8 +201,6 @@ const AllFligth = () => {
                 </div>
 
 
-
-
             </div>
             <div className="w-3/4 bg-white  rounded-lg ">
 
@@ -240,7 +239,11 @@ const AllFligth = () => {
                                         <div className="text-right">
                                             <h1 className="text-xl font-bold text-[#00dd90]">{flight.price - (flight.price / 100)}    $</h1>
                                             <h1><del>{flight.price} </del> $</h1>
-                                            <button className="btn py-1! px-6 mt-8">Book Now</button>
+                                            <div >
+                                            <button className="btn px-6 rounded bg-gray-500 mt-4">Book Now</button>
+                                            <br />
+                                            <FlightDetails/>
+                                            </div>
 
 
                                         </div>
