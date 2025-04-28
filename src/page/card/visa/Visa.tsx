@@ -96,8 +96,6 @@ const Visa = () => {
                             ))}
                         </datalist>
                     </div>
-
-
                 </div>
 
                 <div className="w-full">
@@ -127,15 +125,8 @@ const Visa = () => {
 
             </div>
             <div className="w-1/4  bg-white rounded">
-
-
-
-
-
-
-
                 <div className="flex justify-between mt-40">
-                    <button className="  bg-[#00dd90] text-white p-2 m-2  w-full rounded">SEARCH FOR HOTEL</button>
+                    <button className="  bg-[#00dd90] text-white p-2 m-2  w-full rounded">SEARCH FOR VISA</button>
 
                 </div>
 

@@ -29,7 +29,7 @@ const Flight = () => {
   const dispatch = useAppDispatch()
   const [flight, setFlight] = useState(0);
   const FlightComponent = flightCardComponents[flight].Component;
-  const naviget=useNavigate()
+  const naviget = useNavigate()
 
 
 
@@ -54,6 +54,9 @@ const Flight = () => {
       },
       flightClass: sitClass
     }
+
+    console.log(fligthDetails[0]);
+
     dispatch(setFlights(newFlightDetails))
     naviget('/allfligth')
 
@@ -149,8 +152,10 @@ const Flight = () => {
 
             <div className="w-full mt-5">
               <button
-                className="bg-[#00dd90] w-full text-white px-6 py-2 mx-4 rounded-xl hover:bg-[#00cc85] transition-all"
+                className={`w-full text-white px-6 py-2 rounded-xl transition-all 
+                 ${fligthDetails && fligthDetails.length > 0 ? "bg-[#00dd90] hover:bg-[#00cc85]" : "bg-red-500 cursor-not-allowed"}`}
                 onClick={handleSetFlightsDetails}
+                disabled={fligthDetails ? fligthDetails.length === 0 : true}
               >
                 SEARCH FOR FLIGHT
               </button>

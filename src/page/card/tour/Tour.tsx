@@ -199,7 +199,7 @@ const Tour = () => {
 
 
                 <div className="flex justify-between">
-                    <button className=" bottom-2 bg-[#00dd90] text-white p-2 m-2  w-full rounded">SEARCH FOR HOTEL</button>
+                    <button className=" bottom-2 bg-[#00dd90] text-white p-2 m-2  w-full rounded">SEARCH FOR TORE</button>
 
                 </div>
 
