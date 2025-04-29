@@ -9,7 +9,6 @@ import { setFlights } from "../../../redux/features/fligts/fligthSlice";
 import { addTicket } from "../../../redux/features/fligts/flightMultipalSlice";
 import { useNavigate } from "react-router-dom";
 
-
 const flightCardComponents = [
   {
     label: 'Round Way',
@@ -26,23 +25,22 @@ const flightCardComponents = [
 ];
 
 const Flight = () => {
-  const dispatch = useAppDispatch()
+  const dispatch = useAppDispatch();
   const [flight, setFlight] = useState(0);
   const FlightComponent = flightCardComponents[flight].Component;
-  const naviget = useNavigate()
+  const naviget = useNavigate();
 
+  const [audult, setAudult] = useState('0');
+  const [child, setChild] = useState('0');
+  const [infant, setInfant] = useState('0');
+  const [sitClass, setSitClass] = useState('Economy');
 
+  const { data } = useGetFligthDataQuery();
+  const ticket = useAppSelector((state) => state.multipalFlights.tickets);
+  const from = useAppSelector((state) => state.flights.from) || ticket[0].from;
+  const to = useAppSelector((state) => state.flights.to) || ticket[0].to;
 
-  const [audult, setAudult] = useState('0')
-  const [child, setChild] = useState('0')
-  const [infant, setInfant] = useState('0')
-  const [sitClass, setSitClass] = useState('Economy')
-
-  const { data } = useGetFligthDataQuery()
-  const from = useAppSelector((state) => state.flights.from)
-  const to = useAppSelector((state) => state.flights.to)
-
-  const fligthDetails = data?.flights.filter((item: any) => item.from === from && item.to === to).map((item: any) => item)
+  const fligthDetails = data?.flights.filter((item: any) => item.from === from && item.to === to).map((item: any) => item);
 
   const handleSetFlightsDetails = () => {
     const newFlightDetails = {
@@ -53,14 +51,11 @@ const Flight = () => {
         infant: infant
       },
       flightClass: sitClass
-    }
+    };
 
-    console.log(fligthDetails[0]);
-
-    dispatch(setFlights(newFlightDetails))
-    naviget('/allfligth')
-
-  }
+    dispatch(setFlights(newFlightDetails));
+    naviget('/allfligth');
+  };
 
   return (
     <div className="flex flex-col lg:flex-row justify-center items-stretch mb-7 mx-5 lg:mx-20 gap-5">
@@ -132,23 +127,17 @@ const Flight = () => {
             </div>
           </div>
 
-
-
           <div>
-
-            {
-              flight === 2 && (
-                <div className="w-full">
-                  <button
-                    onClick={() => dispatch(addTicket())}
-                    className="mt-6 w-full px-6 py-2 bg-[#00dd90] text-white rounded-xl text-lg mx-4 hover:bg-[#00cc85] transition-all"
-                  >
-                    ➕ Add Ticket
-                  </button>
-                </div>
-              )
-            }
-
+            {flight === 2 && (
+              <div className="w-full">
+                <button
+                  onClick={() => dispatch(addTicket())}
+                  className="mt-6 w-full py-2 bg-[#00dd90] text-white rounded-xl text-lg hover:bg-[#00cc85] transition-all"
+                >
+                  ➕ Add Ticket
+                </button>
+              </div>
+            )}
 
             <div className="w-full mt-5">
               <button
@@ -160,12 +149,7 @@ const Flight = () => {
                 SEARCH FOR FLIGHT
               </button>
             </div>
-
-
           </div>
-
-
-          {/* <button className="bg-[#00dd90] text-white p-2 rounded " onClick={handleSetFlightsDetails} >SEARCH FORE FLIGHT</button> */}
         </div>
       </div>
     </div>

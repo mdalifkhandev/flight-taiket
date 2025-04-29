@@ -33,7 +33,8 @@ const [activeIndex, setActiveIndex] = useState(0);
 
 
     return (
-        <Box display="flex" flexDirection="column" alignItems="flex-end">
+      <div>
+          <Box display="flex" flexDirection="column" alignItems="flex-end">
       {/* MUI Button Group */}
       <ButtonGroup
         variant="outlined"
@@ -71,8 +72,12 @@ const [activeIndex, setActiveIndex] = useState(0);
       </ButtonGroup>
 
       {/* Dynamic Card */}
-      <ActiveCard />
+      
     </Box>
+    <Box display="flex" flexDirection="column" alignItems="center">
+    <ActiveCard />
+    </Box>
+      </div>
     );
 };
 

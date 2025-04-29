@@ -41,6 +41,7 @@ const Card = () => {
             key={index}
             onClick={() => setActiveIndex(index)}
             sx={{
+              padding: 10,
               px: 5,
               py: 0,
               textTransform: "none",
