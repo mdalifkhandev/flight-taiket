@@ -1,54 +1,29 @@
-# React + TypeScript + Vite
+This is a responsive and modern frontend travel booking user interface, designed to provide a smooth user experience for searching and booking flights, hotels, and tour packages. The UI includes interactive components for selecting departure and destination locations, choosing travel dates, viewing available flight seats, and exploring hotel and destination options. The design is inspired by real-world travel platforms and optimized for both mobile and desktop users.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Key Features:
 
-Currently, two official plugins are available:
+Flight search with departure, destination, date, and seat options
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Dynamic date picker and seat availability UI
 
-## Expanding the ESLint configuration
+Hotel and tour package browsing interfaces
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Clean and responsive design using Tailwind CSS and Ant Design
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+State management handled with Redux Toolkit
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Component-based architecture for reusability and scalability
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Routing handled with React Router for smooth navigation
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+Tech Stack Used:
+
+Framework: React.js
+
+Styling: Tailwind CSS, Ant Design
+
+State Management: Redux Toolkit
+
+Routing: React Router
+
+Tools: Git, GitHub, VS Code
